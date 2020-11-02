@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducao ao Jquery (Seletores)</title>
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <style type="text/css">
+        table {
+            font-size: 36px;
+            padding: 5px;
+        }
+        td, th {
+            border: solid 1px #333;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <table class="tabela-frutas">
+        <thead>
+            <tr>
+                <th>Produtos</th>
+                <th>Janeiro</th>
+                <th>Fevereiro</th>
+                <th>Marco</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Banana</td>
+                <td>100</td>
+                <td>102</td>
+                <td>97</td>
+            </tr>
+            <tr>
+                <td>Laranja</td>
+                <td>201</td>
+                <td>121</td>
+                <td>199</td>
+            </tr>
+            <tr>
+                <td>Maca</td>
+                <td>130</td>
+                <td></td>
+                <td>197</td>
+            </tr>
+            <tr>
+                <td>Morango</td>
+                <td>203</td>
+                <td>121</td>
+                <td>199</td>
+            </tr>
+            <tr>
+                <td>Abacate</td>
+                <td></td>
+                <td>171</td>
+                <td>129</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button id="formatar">Formatar</button>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            // $('.tabela-frutas tr').filter(':even').css('background', '#f7f7f7');
+            // $('.tabela-frutas tr').filter(':odd').css({'background': '#bbb'});
+            // $('.tabela-frutas tr').first().css({'background': '#000', 'color': '#fff'});
+            // $('.tabela-frutas td:empty()').text('0').css('color', 'red');
+
+        });
+
+        $('#formatar').click(function() {
+            $('.tabela-frutas tr').filter(':even').css('background', '#f7f7f7');
+            $('.tabela-frutas tr').filter(':odd').css({'background': '#bbb'});
+            $('.tabela-frutas tr').first().css({'background': '#000', 'color': '#fff'});
+            $('.tabela-frutas td:empty()').text('0').css('color', 'red');
+        });
+
+    </script>
+</body>
+
+</html>

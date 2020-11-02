@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducao ao Jquery</title>
+    <link rel="stylesheet" href="clique-attr.css">
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+
+    <section class="container">
+        <div class="figura">
+            <img src="imagens/bravo.png" alt="Bravo" title="Nao toque em Mim">
+        </div>
+    </section>
+
+
+    <script type="text/javascript">
+
+        // jQuery(document).ready(function () {
+        $(document).ready(function () {
+            // Trocando a imagem e o alt com a funcao attr -> atributo
+            $('.figura img').click(function(){
+                $(this).attr('src','imagens/feliz.png').attr('alt', 'Feliz');
+                // Removendo um atributo
+                $(this).removeAttr('title');
+
+
+                // Adicionando um conteudo apos o conteudo do local clicado
+                // $(this).after('<div class="fala">Eu Gosto de Voce!</div>')
+                // // Adicionando antes do seletor
+                // $(this).before('<div class="fala">Eu Gosto de Voce!</div>')
+
+                // Adiciona a div dentro do elemento figura so que na primeira posicao
+                // $('.figura').prepend('<div class="fala">Eu Gosto de Voce!</div>');
+                // // Adiciona a div dentro do elemento figura so que na ULTIMA posicao
+                // $('.figura').append('<div class="fala">Eu Gosto de Voce!</div>');
+                
+                $('<div class="fala">Eu Gosto de Voce!</div>').appendTo('.container');
+
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>

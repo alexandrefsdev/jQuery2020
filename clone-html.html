@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecao</title>
+    <link rel="stylesheet" href="clone-html.css">
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <section class="container">
+        <div class="alerta"></div>
+
+        <form action="#">
+            <h3>Envie seu Arquivo</h3>
+            <div>
+                <input type="text" name="nome" placeholder="Seu Nome">
+            </div>
+            <div class="anexos">
+                <div class="file">
+                    <input type="file" name="arquivo[]">
+                    <span class="remover">x</span>
+                </div>
+                <span class="bt" id="mais">+ anexos</span>
+            </div>
+            <button class="bt" id="enviar">ENVIAR ARQUIVOS</button>
+        </form>
+
+    </section>
+
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $('#mais').click(function () {
+                // Clonando os anexos -> O first() garante que so clone de 1 em 1
+                let clone = $('.file').first().clone();
+                $(this).before(clone);
+
+            });
+
+            $(document).on('click', '.remover', function () {
+                $(this).parent().remove();
+            });
+
+            $('#enviar').click(function () {
+                // Recuperando o valor do input nome
+                let nome = $('input[name="nome"]').val();
+                console.log(nome);
+                // Validacao basica
+                if ((nome.length) < 3) {
+                    // Adicionando html dentro da div da classe alerta
+                    //$('.alerta').html('<h3>Aviso</h3> <p>Nome precisa ter no minimo 3 letras.</p>');
+                    // Esta funcao replace substitui a div.alerta pelo paragrafo
+                    $('.alerta').replaceWith('<p>Nome precisa ter no minimo 3 letras.</p>');
+
+
+                    return false;
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>

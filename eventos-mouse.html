@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos do Mouse</title>
+<!--
+    - mouseover - Ponteiro em cima do elemento
+    - Mouseout - Sair com o ponteiro do mouse
+    - Mousedown - Enquanto estiver clicando
+    - mouseUp - Quando soltar o botao
+    - Mousemove - moviemnto do mouse
+    -Dblclick - Apos o duplo clique
+    - click
+-->
+    <link rel="stylesheet" href="eventos-mouse.css">
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <section class="container">
+        <div class="figura">
+            <img src="imagens/bravo.png" alt="Bravo" title="Nao toque em Mim">
+        </div>
+        <div class="cord"></div>
+        <div class="cord2"></div>
+    </section>
+
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $('.container').mousemove(function(){
+                let largura = $('.container').width;
+                let posicao = ;
+
+                
+            });
+
+            // Evento de clique duplo
+            $('.figura img').dblclick( function() {
+                $(this).attr('src', 'imagens/feliz.png').attr('alt', 'Te amo');
+            });
+            // Evento que ao passar o mouse em cima, mostra outra imagem
+            $('.figura img').mouseover( function() {
+                $(this).attr('src', 'imagens/cima.png').attr('alt', 'Te amo');
+            });
+            // Evento que ao tirar o mouse de cima, mostra outra imagem
+            $('.figura img').mouseout( function() {
+                $(this).attr('src', 'imagens/bravo.png').attr('alt', 'Te amo');
+            });
+            // Dispara a funcao quando segura o botao do mouse sobre o seletor
+            $('.figura img').mousedown( function() {
+                $(this).attr('src', 'imagens/sair.png').attr('alt', 'Te amo');
+            });
+            // Ao soltar o botao do mouse, dispara essa imagem
+            $('.figura img').mouseup( function() {
+                $(this).attr('src', 'imagens/soltar.png').attr('alt', 'Te amo');
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

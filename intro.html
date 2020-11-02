@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducao ao Jquery</title>
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <h1 id="titulo">Introducao ao Jquery</h1>
+    <h2 class="teste">Sub Titulo</h2>
+
+
+    <div class="conteudo">
+        <p>Entendendo os Seletores de
+            <strong>jQuery</strong>
+            <span>Mais um paragrafo.</span>
+        </p>
+        <span>Segundo Paragrafo.</span>
+        <p>Terceiro Paragrafo. <span>Uma Tag SPAN dentro do Paragrafo</span></p>
+    </div>
+
+    <p>Irmao de conteudo</p>
+    <p class="destaque">Segundo Irmao de conteudo</p>
+    <p>Terceiro Irmao de conteudo</p>
+    <p>Quarto Irmao de conteudo</p>
+    <p class="destaque">Quinto Irmao de conteudo</p>
+    <p>Sexto Irmao de conteudo</p>
+
+    <h6>Testando Header</h6>
+
+
+
+    <script type="text/javascript">
+
+        // jQuery(document).ready(function () {
+        $(document).ready(function () {
+
+            $("#titulo").css("color", "blue");
+            $(".teste").css("color", "green");
+            //$("p").css({ "color": "#444", "font-size": "20px", "text-transform": "uppercase" });
+            //$("#titulo, .teste, p").css("border", "solid 3px");
+
+            // Pegando todos os spans dentro da classe conteudo
+            $('.conteudo').css("border", "solid 2px");
+            $('.conteudo span').css("font-weight", "bold");
+            // Pegando so os filhos diretos da classe conteudos
+            $('.conteudo > span').css("border", "solid 2px");
+            // Pegando todos o irmaos apos a classe conteudo
+            $('.conteudo ~ p ').css("color", "green");
+            // Pegando o primeiro paragrafo apos a classe conteudo
+            $('.conteudo + p').css("color", "blue");
+            // Adicionando borda azul a todos os paragrafos que nao tem a classe destaque
+            $('p:not(.destaque)').css('border','solid 1px blue');
+            // Header pega todas as tags de titulo (h1 ao h6)
+            $(':header').css('font-size', '42px');
+            // Pegando todos os paragrafos que contenha a palavra "jquery"
+            $('p:contains("jQuery")').css("text-decoration", "underline");
+
+        });
+    </script>
+</body>
+
+</html>

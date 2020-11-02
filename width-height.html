@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducao ao Jquery</title>
+    <link rel="stylesheet" href="width-height.css">
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+
+    <div class="mascara"></div>
+
+    <p class="destaque">Qual sera as medidas desta Tag?</p>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Pegando a altura e a largura da classe destaque
+            //let largura = $('.destaque').width();
+            //let altura = $('.destaque').height();
+
+            let largura = $(document).width();
+            let altura = $(document).height();
+
+            //$('.destaque').after("<p> Largura:" + largura + "<br> Altura: "+altura + "</p>");
+
+            //$('.mascara').width('100').height('200');
+            $('.mascara').width(largura).height(altura);
+
+        });
+    </script>
+</body>
+
+</html>

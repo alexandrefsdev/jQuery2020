@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap');
+
+body {
+    background: #000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto 0 50px;
+    padding-top: 8%;
+}
+
+.figura {
+    text-align: center;
+    cursor: pointer;
+}
+
+.figura img {
+    max-width: 150px;
+}
+
+.fala {
+    color:#fff;
+    font-size: 32px;
+}
