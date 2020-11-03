@@ -35,11 +35,20 @@
 
         $(document).ready(function () {
 
-            $('.container').mousemove(function(){
-                let largura = $('.container').width;
-                let posicao = ;
+            $('.container').mousemove(function() {
+                let largura = $('.container').width();
+                let posicao = $('.container').offset().left;
 
-                
+                if ((event.pageX - posicao) > (largura / 2)) {
+                    $('.figura img').attr('src', 'imagens/right.png');
+                } else {
+                    $('.figura img').attr('src', 'imagens/left.png');
+                }
+
+                // $('.cord').text(event.pageX - posicao).css('color', '#fff');
+                // //$('.cord2').text(event.pageX).css('color', '#fff');
+                // $('.cord2').text(largura / 2).css('color', '#fff');
+
             });
 
             // Evento de clique duplo
@@ -62,8 +71,6 @@
             $('.figura img').mouseup( function() {
                 $(this).attr('src', 'imagens/soltar.png').attr('alt', 'Te amo');
             });
-
-
         });
     </script>
 </body>

@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cb77a93-efa6-4921-973f-e1c16298bf64" name="Default Changelist" comment="" />
+    <list default="true" id="6cb77a93-efa6-4921-973f-e1c16298bf64" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eventos-mouse.html" beforeDir="false" afterPath="$PROJECT_DIR$/eventos-mouse.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +15,9 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1jfQdufKbnAC9C0Hb1vI5S4KJGv" />
   <component name="ProjectViewState">
@@ -22,7 +28,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -35,6 +47,8 @@
       <updated>1604192758201</updated>
       <workItem from="1604192759737" duration="109000" />
       <workItem from="1604315684914" duration="93000" />
+      <workItem from="1604403870561" duration="1241000" />
+      <workItem from="1604414333104" duration="607000" />
     </task>
     <servers />
   </component>
@@ -42,9 +56,14 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="169" key="SettingsEditor" timestamp="1604315715125">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1604414811109">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604414811109" />
+    <state x="2815" y="172" width="998" height="708" key="SettingsEditor" timestamp="1604414933281">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2815" y="172" width="998" height="708" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604414933281" />
     <state x="0" y="169" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1604315715125" />
   </component>
 </project>

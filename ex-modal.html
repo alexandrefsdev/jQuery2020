@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducao ao Jquery</title>
+    <link rel="stylesheet" href="ex-modal.css">
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+
+    <p>Aprendendo a criar uma janela Modal (popUp).</p>
+    <button id="btn-abrir-modal" class="btn">Clique e Saiba Mais</button>
+
+    <div class="modal" id="modal-1">
+        <a href="#" class="fechar">(X)</a>
+        <h4>Primeira janela modal</h4>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        </p>
+        <p>
+            It has survived not only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged.
+        </p>
+        <a href="#" class="fechar">Fechar</a>
+    </div>
+
+    <!-- masca para cobrir todo o site-->
+    <div id="mascara"></div>
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            // Variaveis dos seletores modal e da mascara preta
+            let modal = $(".modal");
+            let mascara = $("#mascara");
+
+            // Dando um display none no modal
+            $(modal).hide();
+
+
+            $('#btn-abrir-modal').click(function () {
+                // Criando atributos para centralizar o modal
+                let alturaTela = $(document).height();
+                let larguraTela = $(window).width();
+                // Mostrando tambem a mascara em toda tela
+                $(mascara).css({ "height": alturaTela, "width": larguraTela }).fadeIn("slow");
+                //$(mascara).css({"height":alturaTela, "width":larguraTela}).show();
+
+                let left = (larguraTela / 2 - (modal.width() / 2))
+                let top = (alturaTela / 2 - (modal.height() / 2))
+
+                $(modal).css({ "top": top, "left": left }).show();
+            });
+
+            $(".fechar").click(function () {
+
+                $(modal).hide();
+                $(mascara).fadeOut("slow");
+
+            });
+
+            $(mascara).click(function () {
+
+                $(modal).hide();
+                $(mascara).fadeOut("slow");
+            })
+            // Função de javascript para abrir modal
+            function abrirModal() {
+
+                let alturaTela = $(document).height();
+                let larguraTela = $(window).width();
+
+                $(mascara).css({ "height": alturaTela, "width": larguraTela }).fadeIn("slow");
+
+
+                let left = (larguraTela / 2 - (modal.width() / 2))
+                let top = (alturaTela / 2 - (modal.height() / 2))
+
+                $(modal).css({ "top": top, "left": left }).show();
+            };
+            // Após 3 segundos, abra a função "abrirModal"
+            window.setTimeout(abrirModal, 3000);
+
+
+        });
+    </script>
+</body>
+
+</html>
