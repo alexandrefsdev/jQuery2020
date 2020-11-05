@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducao ao Jquery</title>
+    <link rel="stylesheet" href="ex-menu-lateral.css">
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            LOGO
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Empresa</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+                <li>
+                    <div class="mobile"><span class="traco"></span></div>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="menu-mobile">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Empresa</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+            <!-- Efeito Hover -->
+            <div class="efeito-texto"></div>
+        </nav>
+    </header>
+
+    <section class="container">
+
+        <div class="principal">
+            <h1>Página de Exemplo</h1>
+            <p>Vivamus ultrices sollicitudin justo vel placerat. Suspendisse ac euismod augue. Vestibulum a orci eu diam
+                scelerisque molestie. Curabitur cursus nisi quis laoreet elementum.</p>
+            <p>Maecenas maximus varius augue vel interdum. Cras lacinia scelerisque dapibus. Vestibulum ac vestibulum
+                sapien, quis commodo orci. </p>
+            <p>Vivamus ullamcorper ipsum ante, at molestie ante convallis eu. Duis venenatis porttitor suscipit.</p>
+        </div>
+
+        <aside>
+            <ul>
+                <li><a href="#">Serviço 1</a></li>
+                <li><a href="#">Serviço 2</a></li>
+                <li><a href="#">Serviço 3</a></li>
+                <li><a href="#">Serviço 4</a></li>
+            </ul>
+        </aside>
+
+    </section>
+
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            let alturaTotalTela = $(document).height();
+
+            $('.menu-mobile ul > li a').hover(function () {
+                let texto = $(this).text();
+
+                $('.efeito-texto').text(texto);
+            });
+
+            $('.mobile').click(function() {
+                $('.menu-mobile').css('height', alturaTotalTela).fadeToggle()
+            });
+
+        });
+    </script>
+</body>
+
+</html>

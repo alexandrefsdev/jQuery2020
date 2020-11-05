@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducao ao Jquery</title>
+    <link rel="stylesheet" href="ex-accordeon.css">
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+
+    <h1>Efeitos de Slide</h1>
+
+    <div class="slides">
+
+        <h2 id="servico-1">Serviço Um</h2>
+        <div id="slide-1" class="slide">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a tempus turpis.
+                Donec vestibulum vestibulum odio eget tincidunt. Quisque quis nulla quis purus malesuada gravida sed sit
+                amet velit.
+            </p>
+            <p>
+                Phasellus ac elit sed neque bibendum pulvinar. Quisque fermentum sollicitudin ligula, vel tempor augue
+                viverra at.
+            </p>
+        </div>
+
+        <h2 id="servico-2">Serviço Dois</h2>
+        <div id="slide-2" class="slide">
+            <p>
+                Phasellus pharetra tristique nisi, et sodales nulla. Fusce nec condimentum nisl, eget tempus ante.
+            </p>
+            <p>
+                Pellentesque pulvinar leo ac ante varius euismod quis at eros.
+            </p>
+        </div>
+
+        <h2 id="servico-3">Serviço Três</h2>
+        <div id="slide-3" class="slide">
+            <p>
+                Quisque nulla velit, iaculis id lectus quis, commodo viverra felis. In fringilla metus urna, vel
+                dignissim metus bibendum nec.
+            </p>
+            <p>
+                Praesent sollicitudin, enim a fringilla facilisis, enim tortor laoreet nisl, ut maximus lorem elit vitae erat.
+            </p>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            // Mostrar o texto ao clicar no serviço 1
+            $('#servico-1').click(function() {
+                // Verificador para saber se está escondido ou não, se estiver, ao clique, mostre o texto
+                if ($('#slide-1').is(':hidden') ) {
+                    $('#slide-1').slideDown('slow');
+                }else {
+                    // Se não, esconda o texto
+                    $('#slide-1').slideUp('slow');
+                }
+            });
+
+            $('#servico-2').click(function() {
+                // Verificador para saber se está escondido ou não, se estiver, ao clique, mostre o texto
+                if ($('#slide-2').is(':hidden') ) {
+                    $('#slide-2').slideDown('slow');
+                }else {
+                    // Se não, esconda o texto
+                    $('#slide-2').slideUp('slow');
+                }
+            });
+
+            $('#servico-3').click(function() {
+                // Verificador para saber se está escondido ou não, se estiver, ao clique, mostre o texto
+                if ($('#slide-3').is(':hidden') ) {
+                    $('#slide-3').slideDown('slow');
+                }else {
+                    // Se não, esconda o texto
+                    $('#slide-3').slideUp('slow');
+                }
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

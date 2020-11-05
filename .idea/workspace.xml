@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6cb77a93-efa6-4921-973f-e1c16298bf64" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eventos-mouse.html" beforeDir="false" afterPath="$PROJECT_DIR$/eventos-mouse.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +26,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Apache24/htdocs/agendamento" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -49,6 +48,7 @@
       <workItem from="1604315684914" duration="93000" />
       <workItem from="1604403870561" duration="1241000" />
       <workItem from="1604414333104" duration="607000" />
+      <workItem from="1604575504257" duration="746000" />
     </task>
     <servers />
   </component>
@@ -56,10 +56,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1604414811109">
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1604576256344">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604414811109" />
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604576256344" />
     <state x="2815" y="172" width="998" height="708" key="SettingsEditor" timestamp="1604414933281">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

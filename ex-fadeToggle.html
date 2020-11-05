@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducao ao Jquery</title>
+    <link rel="stylesheet" href="ex-fadeToggle.css">
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+
+    <h1>Efeitos de Slide</h1>
+
+    <div class="slides">
+
+        <h2 id="servico-1">Título de Exemplo</h2>
+
+        <div id="ajuda" class="dupla">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a tempus turpis.
+                Donec vestibulum vestibulum odio eget tincidunt. Quisque quis nulla quis purus malesuada gravida sed sit
+                amet velit.
+            </p>
+            <p>
+                Phasellus ac elit sed neque bibendum pulvinar. Quisque fermentum sollicitudin ligula, vel tempor augue
+                viverra at.
+            </p>
+            <span class="botao">Mostrar / Ocultar Valores</span>
+        </div>
+
+        <div class="dupla valores">
+            <h1>R$ 586,68</h1>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $('.botao').click(function() {
+                // efeito de aparecer ou desaparecer com o clique
+                //$('.valores').fadeToggle('slow')
+                // efeito diferente mas com mesma função
+                $('.valores').toggle('slow')
+            });
+
+        });
+    </script>
+</body>
+
+</html>

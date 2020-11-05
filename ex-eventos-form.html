@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos do Teclado</title>
+    <!--
+        Keydown - Pressiona
+        Keyup - Solta a tecla
+        Keypress - Após Pressionar
+
+        toUpperCase() -  Maiuscula
+        toLowerCase() - Minuscula
+    -->
+    <link rel="stylesheet" href="ex-eventos-form.css">
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <section class="container">
+        <form>
+            <div>
+                <label>Nome Completo:</label>
+                <input type="text" name="nomecompleto" class="maiuscula">
+            </div>
+            <div>
+                <label>Nome Usuário:</label>
+                <input type="text" name="usuario" class="minuscula">
+            </div>
+            <div>
+                <label>Mensagem:</label>
+                <textarea name="msg"></textarea>
+                <span class="contagem"></span>
+            </div>
+            <div><input type="submit" id="enviar" name="enviar"></div>
+        </form>
+    </section>
+
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            // Criando Tooltip
+            //
+            // $('input[name="nomecompleto"]').focus(function () {
+            //     $(this).after('<span class="aviso">Preencha seu nome e sobrenome</span>');
+            // });
+            // Usando a função focus -> quando clicar no input, aparece a mensagem de aviso
+            $('input[name="nomecompleto"]').focusin(function () {
+                $(this).after('<span class="aviso">Preencha seu nome e sobrenome</span>');
+            });
+            // Quando tirar o focus do input, remove a classe anteriormente adicionada
+            $('input[name="nomecompleto"]').focusout(function () {
+                $('.aviso').remove();
+            });
+
+            // Criando Tooltip com o hover
+            $('input[name="usuario"]').hover(
+                function () {
+                    $(this).after('<span class="aviso">Preencha seu usuário</span>');
+                },
+                function () {
+                    $('.aviso').remove();
+                }
+            );
+            // Validando os dadso com o jQuery
+            $('#enviar'). click(function () {
+                let nomecompleto = $('input[name="nomecompleto"]');
+                let usuario = $('input[name="usuario"]');
+
+                if (nomecompleto.val().length < 5) {
+                    $(nomecompleto).after("<span class='erro'>Preencha seu nome completo</span>");
+                    $('.erro').fadeOut(5000);
+                    $(nomecompleto).focus();
+                    return false;
+                }
+                if (usuario.val().length < 3) {
+                    $(usuario).after("<span class='erro'>Preencha seu nome de Usuário</span>");
+                    $('.erro').fadeOut(5000);
+                    $(usuario).focus();
+                    return false;
+                }
+
+            })
+
+        });
+    </script>
+</body>
+
+</html>

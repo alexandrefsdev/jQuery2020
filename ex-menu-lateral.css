@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap');
+
+body {
+    font-size: 18px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none
+}
+
+header {
+    background: #f5f5f5;
+    border-top: 5px #333 solid;
+    overflow: hidden;
+}
+
+.logo {
+    width: 20%;
+    float: left;
+    font-size: 52px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.menu {
+    width: 80%;
+    float: right;
+    text-align: right;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul {
+    padding-right: 50px;
+}
+
+.menu ul>li {
+    display: inline-block;
+    list-style: none;
+    padding: 20px;
+    vertical-align: middle;
+}
+
+section {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.principal {
+    width: 74%;
+    float: left;
+}
+
+aside {
+    width: 25%;
+    float: right;
+}
+
+aside ul>li {
+    padding: 10px 5px;
+    border-bottom: dotted 1px #999;
+}
+
+/* Menu Mobile */
+.menu-mobile {
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    padding-top: 5%;
+    display: none;
+}
+
+.menu-mobile ul>li {
+    padding: 10px 0;
+
+}
+
+.menu-mobile ul>li a {
+    color: #069;
+    /* background: #069; */
+    padding: 10px 15px;
+    font-size: 42px;
+    transition: all 0.5s ease;
+}
+
+.menu-mobile ul>li a:hover{
+    color: #fff;
+    background: #069;
+    border-radius: 8px ;
+}
+
+.mobile {
+    position: relative;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background: #069;
+    border-radius: 5px;
+    display: none;
+}
+
+.mobile .traco {
+    height: 3px;
+    background: #fff;
+    width: 30px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+
+.mobile .traco::before {
+    content: '';
+    height: 3px;
+    background: #fff;
+    width: 30px;
+    position: absolute;
+    top: 8px;
+    left: 0px;
+}
+
+.mobile .traco::after {
+    content: '';
+    height: 3px;
+    background: #fff;
+    width: 30px;
+    position: absolute;
+    top: 16px;
+    left: 0px;
+}
+
+.efeito-texto {
+    color: #fff;
+    font-size: 5em;
+    position: absolute;
+    opacity: 0.4;
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .mobile {
+        display: block;
+    }
+
+    .menu li>a {
+        display: none
+    }
+}
